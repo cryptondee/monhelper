@@ -1,0 +1,11 @@
+[
+  {"Id": 0, "Name": "Ghouliath", "HP": 303, "Attack": 157, "Defense": 202, "SpecialAttack": 151, "SpecialDefense": 202, "Speed": 181, "Type1": "Yang", "Type2": "Fire", "BST": 1196, "Flavor": "Often found in dark places like caves and OTC trading desks."},
+  {"Id": 1, "Name": "Inutia", "HP": 351, "Attack": 171, "Defense": 189, "SpecialAttack": 175, "SpecialDefense": 192, "Speed": 259, "Type1": "Wild", "Type2": null, "BST": 1337, "Flavor": "A little jumpy. Nose is always wet."},
+  {"Id": 2, "Name": "Malalien", "HP": 258, "Attack": 121, "Defense": 125, "SpecialAttack": 322, "SpecialDefense": 151, "Speed": 308, "Type1": "Cyber", "Type2": null, "BST": 1285, "Flavor": "Do not approach or be approached. "},
+  {"Id": 3, "Name": "Iblivion", "HP": 277, "Attack": 188, "Defense": 164, "SpecialAttack": 240, "SpecialDefense": 168, "Speed": 256, "Type1": "Cosmic", "Type2": "Air", "BST": 1293, "Flavor": "Many say it has great potential for growth."},
+  {"Id": 4, "Name": "Gorillax", "HP": 407, "Attack": 302, "Defense": 175, "SpecialAttack": 112, "SpecialDefense": 176, "Speed": 129, "Type1": "Earth", "Type2": null, "BST": 1301, "Flavor": "Big."},
+  {"Id": 5, "Name": "Sofabbi", "HP": 333, "Attack": 180, "Defense": 201, "SpecialAttack": 120, "SpecialDefense": 269, "Speed": 205, "Type1": "Nature", "Type2": null, "BST": 1308, "Flavor": "Their carrots make for a good stew."},
+  {"Id": 6, "Name": "Pengym", "HP": 371, "Attack": 212, "Defense": 191, "SpecialAttack": 233, "SpecialDefense": 172, "Speed": 149, "Type1": "Ice", "Type2": null, "BST": 1328, "Flavor": "Even their ice contains a lot of protein."},
+  {"Id": 7, "Name": "Embursa", "HP": 420, "Attack": 141, "Defense": 230, "SpecialAttack": 180, "SpecialDefense": 161, "Speed": 111, "Type1": "Fire", "Type2": null, "BST": 1243, "Flavor": "It will use even its own fur as fuel for its fire."},
+  {"Id": 8, "Name": "Volthare", "HP": 303, "Attack": 120, "Defense": 184, "SpecialAttack": 255, "SpecialDefense": 176, "Speed": 311, "Type1": "Lightning", "Type2": "Cyber", "BST": 1349, "Flavor": "Its mental circuitry is scattered because of its high speed."}
+]
