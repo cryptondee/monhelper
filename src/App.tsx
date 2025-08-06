@@ -5,6 +5,7 @@ import { TeamSelector } from '@/components/TeamSelector'
 import { MoveRecommender } from '@/components/MoveRecommender'
 import { SwitchSuggestion } from '@/components/SwitchSuggestion'
 import { SearchFilter } from '@/components/SearchFilter'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 
 import monsData from '@/assets/data/mons.json'
@@ -50,11 +51,14 @@ function App() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto p-4 max-w-7xl">
-        <div className="mb-6">
-          <h1 className="text-4xl font-bold tracking-tight mb-2">Battle Helper</h1>
-          <p className="text-lg text-muted-foreground">
-            Strategic battle analysis and move recommendations
-          </p>
+        <div className="mb-6 flex justify-between items-start">
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight mb-2">Battle Helper</h1>
+            <p className="text-lg text-muted-foreground">
+              Strategic battle analysis and move recommendations
+            </p>
+          </div>
+          <ThemeToggle />
         </div>
 
         <div className="mb-6">

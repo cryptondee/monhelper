@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { Mon, Move } from '@/lib/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { TypeBadge } from '@/components/ui/type-badge'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { suggestSwitch } from '@/lib/battle-calculator'
@@ -46,7 +47,7 @@ export function SwitchSuggestion({ team, activeMon, opponent, moves, onSwitchTo 
           <CardTitle>Switch Suggestion</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center gap-2 text-green-600">
+          <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
             <span className="font-medium">✓ Stay with {activeMon.Name}</span>
           </div>
           <p className="text-sm text-muted-foreground mt-2">
@@ -58,11 +59,11 @@ export function SwitchSuggestion({ team, activeMon, opponent, moves, onSwitchTo 
   }
 
   return (
-    <Card className="w-full border-orange-200 bg-orange-50/50">
+    <Card className="w-full border-orange-200 bg-orange-50/50 dark:border-orange-800 dark:bg-orange-950/50">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-orange-700">
+        <CardTitle className="flex items-center gap-2 text-orange-700 dark:text-orange-300">
           Switch Suggestion
-          <Badge variant="outline" className="text-orange-600 border-orange-300">
+          <Badge variant="outline" className="text-orange-600 border-orange-300 dark:text-orange-400 dark:border-orange-600">
             Recommended
           </Badge>
         </CardTitle>
@@ -72,9 +73,9 @@ export function SwitchSuggestion({ team, activeMon, opponent, moves, onSwitchTo 
           <div className="text-center">
             <div className="text-sm text-muted-foreground">{activeMon.Name}</div>
             <div className="flex gap-1 justify-center mt-1">
-              <Badge variant="outline" className="text-xs">{activeMon.Type1}</Badge>
+              <TypeBadge type={activeMon.Type1} size="sm" />
               {activeMon.Type2 && (
-                <Badge variant="outline" className="text-xs">{activeMon.Type2}</Badge>
+                <TypeBadge type={activeMon.Type2} size="sm" />
               )}
             </div>
           </div>
@@ -84,15 +85,15 @@ export function SwitchSuggestion({ team, activeMon, opponent, moves, onSwitchTo 
           <div className="text-center">
             <div className="text-sm font-medium">{suggestion.mon.Name}</div>
             <div className="flex gap-1 justify-center mt-1">
-              <Badge variant="default" className="text-xs">{suggestion.mon.Type1}</Badge>
+              <TypeBadge type={suggestion.mon.Type1} size="sm" />
               {suggestion.mon.Type2 && (
-                <Badge variant="secondary" className="text-xs">{suggestion.mon.Type2}</Badge>
+                <TypeBadge type={suggestion.mon.Type2} size="sm" />
               )}
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded p-3 border">
+        <div className="bg-card rounded p-3 border border-border">
           <div className="flex justify-between items-start mb-2">
             <div>
               <div className="font-medium">{suggestion.bestMove.move.Name}</div>
@@ -101,7 +102,7 @@ export function SwitchSuggestion({ team, activeMon, opponent, moves, onSwitchTo 
               </div>
             </div>
             <div className="text-right">
-              <div className="text-lg font-bold text-green-600">
+              <div className="text-lg font-bold text-green-600 dark:text-green-400">
                 {suggestion.bestMove.expectedDamage.toFixed(1)}
               </div>
               <div className="text-xs text-muted-foreground">Expected DMG</div>
@@ -109,11 +110,11 @@ export function SwitchSuggestion({ team, activeMon, opponent, moves, onSwitchTo 
           </div>
           
           <div className="flex items-center gap-2">
-            <Badge variant="outline">{suggestion.bestMove.move.Type}</Badge>
+            <TypeBadge type={suggestion.bestMove.move.Type} size="sm" />
             {suggestion.bestMove.hasStab && (
               <Badge variant="default" className="text-xs">STAB</Badge>
             )}
-            <span className="text-sm text-green-600">
+            <span className="text-sm text-green-600 dark:text-green-400">
               ×{suggestion.bestMove.effectiveness} effectiveness
             </span>
           </div>

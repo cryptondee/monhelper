@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Mon } from '@/lib/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
+import { TypeBadge } from '@/components/ui/type-badge'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { X } from 'lucide-react'
 
@@ -80,9 +80,9 @@ export function TeamSelector({ mons, selectedTeam, activeMon, onTeamChange, onAc
                     </Button>
                     <span className="font-medium">{mon.Name}</span>
                     <div className="flex gap-1">
-                      <Badge variant="default" className="text-xs">{mon.Type1}</Badge>
+                      <TypeBadge type={mon.Type1} size="sm" />
                       {mon.Type2 && (
-                        <Badge variant="secondary" className="text-xs">{mon.Type2}</Badge>
+                        <TypeBadge type={mon.Type2} size="sm" />
                       )}
                     </div>
                   </div>

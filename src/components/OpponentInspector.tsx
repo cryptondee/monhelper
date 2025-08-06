@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import { Mon, Move } from '@/lib/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Badge } from '@/components/ui/badge'
+import { TypeBadge } from '@/components/ui/type-badge'
 
 interface OpponentInspectorProps {
   mons: Mon[]
@@ -44,9 +43,9 @@ export function OpponentInspector({ mons, moves, selectedOpponent, onOpponentSel
         {selectedOpponent && (
           <div className="space-y-4">
             <div className="flex gap-2">
-              <Badge variant="default">{selectedOpponent.Type1}</Badge>
+              <TypeBadge type={selectedOpponent.Type1} />
               {selectedOpponent.Type2 && (
-                <Badge variant="secondary">{selectedOpponent.Type2}</Badge>
+                <TypeBadge type={selectedOpponent.Type2} />
               )}
             </div>
 
@@ -84,7 +83,7 @@ export function OpponentInspector({ mons, moves, selectedOpponent, onOpponentSel
                   <div key={move.Name} className="text-sm border rounded p-2">
                     <div className="flex justify-between items-start">
                       <div className="font-medium">{move.Name}</div>
-                      <Badge variant="outline" className="text-xs">{move.Type}</Badge>
+                      <TypeBadge type={move.Type} size="sm" />
                     </div>
                     <div className="text-xs text-muted-foreground mt-1">
                       Power: {move.Power} | Accuracy: {move.Accuracy}% | Priority: {move.Priority}

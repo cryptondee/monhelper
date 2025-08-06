@@ -192,10 +192,6 @@ Contributions are welcome! Please follow these steps:
 - [ ] Dark mode toggle
 - [ ] Mobile app version
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - Game data provided by https://github.com/sudo-owen/chomp/tree/main

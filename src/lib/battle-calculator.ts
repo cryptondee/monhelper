@@ -1,4 +1,4 @@
-import { Mon, Move, TypeEffectiveness, MoveRecommendation } from './types'
+import { Mon, Move, MoveRecommendation } from './types'
 import typesData from '@/assets/data/types.json'
 
 const typeChart = new Map<string, number>()

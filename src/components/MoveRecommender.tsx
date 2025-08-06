@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
-import { Mon, Move, MoveRecommendation } from '@/lib/types'
+import { Mon, Move } from '@/lib/types'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { TypeBadge } from '@/components/ui/type-badge'
 import { Badge } from '@/components/ui/badge'
 import { recommendMoves } from '@/lib/battle-calculator'
 
@@ -63,7 +64,7 @@ export function MoveRecommender({ activeMon, opponent, moves }: MoveRecommenderP
                 <div className="flex items-center gap-2">
                   <span className="text-lg font-semibold">#{index + 1}</span>
                   <span className="font-medium">{rec.move.Name}</span>
-                  <Badge variant="outline">{rec.move.Type}</Badge>
+                  <TypeBadge type={rec.move.Type} size="sm" />
                   {rec.hasStab && <Badge variant="default" className="text-xs">STAB</Badge>}
                 </div>
                 <div className="text-right">
